@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>views</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        main {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1140px;
+            width: 90%;
+        }
+
+        .part {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .part img {
+            max-width: 300px;
+            max-height: 400px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .part div {
+            flex: 1; 
+        }
+
+        .part h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .part p {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+
+        .part strong {
+            color: #555;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <main>
+        <div class="part">
+            <div>
+                <img src="<%= singleObj.image %>" alt="img">
+            </div>
+            <div>
+                <h2><%= singleObj.title %></h2>
+                <p><strong>Title :  </strong><%= singleObj.title %></p>
+                <p><strong>Author : </strong><%= singleObj.author %></p>
+                <p><strong>Rating : </strong> ⭐<%= singleObj.rating %></p>
+                <p><strong>Description : </strong><%= singleObj.description %></p>
+                <p><strong>Genre : </strong><%= singleObj.genre %></p>
+                <p><strong>price : </strong><%= singleObj.price %></p>
+                <p><strong>Stock : </strong><%= singleObj.stock %></p>
+                <p><strong>PublisheDate : </strong><%= singleObj.publishedate %></p>
+                <p><strong>Publisher : </strong><%= singleObj.publisher %></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

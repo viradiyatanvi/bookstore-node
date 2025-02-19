@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+       
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007bff;
+        }
+
+        main {
+            margin-top: 70px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 70px); 
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-width: 100%;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/view_emp">View</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="/insertdata" method="post" enctype="multipart/form-data" style="margin-top:400px;">
+            <h2 class="form-title" style="text-align: center;">Book Information</h2>
+
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" required>
+
+            <label for="author">Author:</label>
+            <input type="text" name="author" id="author" required>
+
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" required></textarea>
+
+            <label>Genre:</label>
+            <div class="genre">
+                <input type="checkbox" name="genre" value="gujarati">Gujarati
+                <input type="checkbox" name="genre" value="hindi">Hindi
+                <input type="checkbox" name="genre" value="english">English
+            </div>
+
+            <label for="price">Price:</label>
+            <input type="number" name="price" id="price" required>
+
+            <label for="stock">Stock:</label>
+            <input type="number" name="stock" id="stock" required>
+
+            <label for="publishedate">Published Date:</label>
+            <input type="date" name="publishedate" id="publishedate" required>
+
+            <label for="publisher">Publisher:</label>
+            <input type="text" name="publisher" id="publisher" required>
+
+            <label for="image">Cover Image:</label>
+            <input type="file" name="image" id="image" required>
+
+            <label>Rating:</label>
+            <div class="rating">
+                <input type="radio" name="rating" value="1" required>1
+                <input type="radio" name="rating" value="2">2
+                <input type="radio" name="rating" value="3">3
+                <input type="radio" name="rating" value="4">4
+                <input type="radio" name="rating" value="5">5
+            </div> <br><br> 
+
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </main>
+</body>
+</html>
